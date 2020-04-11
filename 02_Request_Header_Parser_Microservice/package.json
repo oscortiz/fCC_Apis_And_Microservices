@@ -1,0 +1,26 @@
+{
+  "name": "request-header-parser-microservice",
+  "version": "0.0.1",
+  "description": "Apis and Microservices Projects for freeCodeCamp - Request Header Parser Microservice",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "cors": "^2.8.5"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oscortiz/request-header-parser-microservice"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}

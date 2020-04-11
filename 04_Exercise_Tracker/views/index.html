@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />    
+    <link rel="stylesheet" href="https://bootswatch.com/4/spacelab/bootstrap.min.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <title>Exercise tracker</title>
+  </head>
+  <body>   
+    <div class="container-fluid">   
+      <div class="jumbotron border-secondary text-white bg-secondary mt-3 p-2 shadow">
+        <div class="container text-center">
+          <h1 class="display-4 text-white">Exercise tracker</h1>
+          <p class="lead font-weight-bold d-none d-sm-block">Apis and Microservices Projects for freeCodeCamp</p>
+        </div>
+      </div>         
+      <div class="card-deck">
+        <div class="card border-secondary shadow">
+          <div class="card-header text-white bg-secondary text-monospace font-weight-bold">Create a New User</div>
+          <div class="card-body">   
+            <ul class="list-group list-group-flush justify-content-center">
+              <li class="list-group-item">
+                <code class="font-weight-bold">POST /api/exercise/new-user</code>
+              </li>
+              <li class="list-group-item">
+                <form action="api/exercise/new-user" method="POST">
+                  <div class="form-group row">
+                    <input type="text" class="form-control form-control-sm" id="uname" name="username" placeholder="username">
+                  </div>
+                  <div class="form-group row"> 
+                    <button type="submit" class="btn btn-primary btn-sm btn-block">Submit</button>     
+                  </div>   
+                </form>                        
+              </li>
+            </ul>                   
+          </div>            
+        </div>
+        <div class="card border-secondary shadow">
+          <div class="card-header text-white bg-secondary text-monospace font-weight-bold">Add exercises</div>
+          <div class="card-body">   
+            <ul class="list-group list-group-flush justify-content-center">
+              <li class="list-group-item">
+                <code class="font-weight-bold">POST /api/exercise/add</code>
+              </li>
+              <li class="list-group-item">
+                <form action="api/exercise/add" method="POST">
+                  <div class="form-group row">
+                    <input type="text" class="form-control form-control-sm" id="uid" name="userId" placeholder="userId*">
+                  </div>
+                  <div class="form-group row">
+                    <input type="text" class="form-control form-control-sm" id="desc" name="description" placeholder="description*">
+                  </div>
+                  <div class="form-group row">
+                    <input type="text" class="form-control form-control-sm" id="dur" name="duration" placeholder="duration* (mins.)">
+                  </div>
+                  <div class="form-group row">
+                    <input type="text" class="form-control form-control-sm" id="dat" name="date" placeholder="date (yyyy-mm-dd)">
+                  </div>                                                                  
+                  <div class="form-group row"> 
+                    <button type="submit" class="btn btn-primary btn-sm btn-block">Submit</button>     
+                  </div>   
+                </form>                        
+              </li>
+            </ul>                   
+          </div>            
+        </div>          
+      </div>   
+      <div class="row justify-content-center">
+        <div class="card border-secondary shadow m-4 col-md-6">
+          <div class="card-body text-center">
+            <p class="font-weight-bold">GET users's exercise log: <code>GET /api/exercise/log?{userId}[&from][&to][&limit]</code></p>
+            <p><strong>{ }</strong> = required, <strong>[ ]</strong> = optional</p>
+            <p><strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> = number</p>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>    
+  </body>
+</html>

@@ -1,0 +1,7 @@
+body {
+    background-color: #c3d2df;
+}
+
+ul > li > code {
+    font-size: 1rem;
+}

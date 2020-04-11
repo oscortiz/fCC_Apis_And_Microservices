@@ -1,0 +1,16 @@
+body {
+    background-color: #c3d2df;
+}
+
+#dropZone {
+    border: dashed 3px #b3b3b3;
+    background-color: #ececec;    
+    height: 210px !important;
+    color: #888888;
+}
+
+#dropZone:hover {
+    border: dashed 3px #888888;
+    background-color: #d4d1d1;
+    color: #666666;
+}

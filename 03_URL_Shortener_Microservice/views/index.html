@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />    
+    <link rel="stylesheet" href="https://bootswatch.com/4/spacelab/bootstrap.min.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <title>URL Shortener Microservice</title>
+  </head>
+  <body>
+    <div class="container">     
+      <div class="row justify-content-center">
+        <div class="card border-secondary m-4 shadow">
+          <div class="card-header text-white bg-secondary text-monospace"><h3 class="mb-0">URL Shortener Microservice</h3></div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush justify-content-center">
+              <li class="list-group-item">
+                I can POST a URL to <code>[project_url]/api/shorturl/new</code> and I will receive a shortened URL in the JSON response.<br>
+                Example: <code>{ "original_url": "https://www.google.com", "short_url": 2 }</code>
+              </li>
+              <li class="list-group-item">
+                If I pass an invalid URL that doesn't follow the <strong>http(s)://www.example.com(/more/routes)</strong> format, the JSON response will contain an error like
+                <code>{ "error": "invalid URL" }</code>
+              </li>
+              <li class="list-group-item">
+                When I visit the shortened URL, it will redirect me to my original link.
+              </li>
+            </ul> 
+          </div>
+          <div class="card-header text-white bg-secondary text-monospace font-weight-bold">Example usage</div>
+          <div class="card-body">
+            <a href="https://oscortiz-url-shortener-microservice.glitch.me/api/shorturl/2">[project_url]/api/shorturl/2</a>
+          </div>
+          <div class="card-header text-white bg-secondary text-monospace font-weight-bold">Will Redirect to:</div>
+          <div class="card-body">
+            https://www.google.com
+          </div>
+          <div class="card-header text-white bg-secondary text-monospace font-weight-bold">Short URL Creation:</div>
+          <div class="card-body">   
+            <ul class="list-group list-group-flush justify-content-center">
+              <li class="list-group-item">
+                Example: <code>POST [project_url]/api/shorturl/new/https://www.freecodecamp.org</code>
+              </li>
+              <li class="list-group-item">
+                <form action="api/shorturl/new" method="POST">
+                  <div class="form-group row">
+                    <label for="url_input" class="col-md-4 col-form-label">URL to be shortened</label>
+                    <div class="col-md-8">
+                      <input type="text" class="form-control" id="url_input" name="url" placeholder="https://www.freecodecamp.org">
+                    </div>   
+                  </div>      
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-md-3">
+                      <button type="submit" class="btn btn-primary">POST URL</button>
+                    </div> 
+                  </div>         
+                </form>                        
+              </li>
+            </ul>                   
+          </div>            
+        </div>
+      </div>    
+    </div> 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>    
+  </body>
+</html>
+
+
+

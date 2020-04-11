@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />    
+    <link rel="stylesheet" href="https://bootswatch.com/4/spacelab/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <title>File Metadata Microservice</title>
+  </head>
+  <body>
+    <div class="container">     
+        <div class="row justify-content-center">
+          <div class="card border-secondary m-4 shadow">
+            <div class="card-header text-white bg-secondary text-monospace text-center"><h3 class="mb-0">API Project:<br>File Metadata Microservice</h3></div>
+            <div class="card-header text-white bg-secondary text-monospace font-weight-bold">Usage:</div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush justify-content-center">
+                <li class="list-group-item">Upload a file.</li>
+                <li class="list-group-item">You will receive a JSON response.</li>
+                <li class="list-group-item">The JSON response will contain the name of the uploaded file, its type and its size in bytes.</li>
+              </ul>
+            </div>
+            <div class="card-header text-white bg-secondary text-monospace font-weight-bold">Please Upload a File ...</div>
+            <div class="card-body">
+              <form enctype="multipart/form-data" action="/api/fileanalyse" method="POST">
+                <div class="p-4 mb-2" id="dropZone">
+                  <input type="file" class="invisible" id="upfile" name="upfile">
+                  <div class="row justify-content-center my-2"><i class="fas fa-upload fa-3x"></i></div>                 
+                  <div class="row justify-content-center"><p class="text-center" id="fileName">Drag and drop a file here or click</p></div>                     
+                </div>  
+                <div class="row justify-content-center"> 
+                  <button type="submit" id="submit" class="btn btn-sm btn-primary btn-block w-75 font-weight-bold" disabled>Upload</button>     
+                </div>
+              </form> 
+            </div>            
+          </div>
+        </div>         
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>    
+    <script src="/file_metadata.js"></script> 
+  </body>
+</html>
+

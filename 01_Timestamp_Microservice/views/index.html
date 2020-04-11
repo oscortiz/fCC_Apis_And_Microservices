@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />    
+    <link rel="stylesheet" href="https://bootswatch.com/4/spacelab/bootstrap.min.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <title>Timestamp Microservice</title>
+  </head>
+  <body>
+    <div class="container">     
+        <div class="row justify-content-center">
+          <div class="card border-secondary m-4 shadow">
+            <div class="card-header text-white bg-secondary text-monospace"><h3 class="mb-0">API Project: Timestamp Microservice</h3></div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush justify-content-center">
+                <li class="list-group-item">
+                  The API endpoint is GET <code>[project_url]/api/timestamp/:date_string?</code>
+                </li>
+                <li class="list-group-item">
+                  A date string is valid if can be successfully parsed by <code>new Date(date_string)</code>.
+                  Note that the unix timestamp needs to be an <strong>integer</strong> (not a string) specifying <strong>milliseconds</strong>.<br>
+                  In our test we will use date strings compliant with <strong>ISO-8601</strong> (e.g. "2019-02-14") because this will ensure an UTC timestamp
+                </li>
+                <li class="list-group-item">
+                  If the date string is <strong>empty</strong> it should be equivalent to trigger <code>new Date()</code>, i.e. the service uses the current timestamp.
+                </li>
+                <li class="list-group-item">
+                  If the date string is <strong>valid</strong> the api returns a JSON having the structure<br>
+                  <code>{ "unix": &lt;date.getTime()&gt;, "utc": &lt;date.toUTCString()&gt; }</code><br>
+                  e.g.<br> <code>{ "unix": 1550137600000, "utc": "Thu, 14 Feb 2019 09:46:40 GMT" }</code>
+                </li>
+                <li class="list-group-item">
+                  If the date string is <strong>invalid</strong> the api returns a JSON having the structure<br> 
+                  <code>{ "error": "Invalid Date" }</code>.
+                </li>
+              </ul> 
+            </div>
+            <div class="card-header text-white bg-secondary text-monospace font-weight-bold">Example usage</div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <strong>Empty date:</strong> <a href="https://oscortiz-timestamp-microservice.glitch.me/api/timestamp">[project_url]/api/timestamp</a>
+                </li>
+                <li class="list-group-item">
+                  <strong>Valid date:</strong> <a href="https://oscortiz-timestamp-microservice.glitch.me/api/timestamp/2019-02-14">[project_url]/api/timestamp/2019-02-14</a>
+                </li>
+                <li class="list-group-item">
+                    <strong>Valid unix timestamp:</strong> <a href="https://oscortiz-timestamp-microservice.glitch.me/api/timestamp/1550137600000">[project_url]/api/timestamp/1550137600000</a> 
+                </li>                  
+                <li class="list-group-item">
+                  <strong>Invalid date or unix timestamp:</strong> <a href="https://oscortiz-timestamp-microservice.glitch.me/api/timestamp/sorry">[project_url]/api/timestamp/sorry</a> 
+                </li>
+              </ul>
+            </div>
+            <div class="card-header text-white bg-secondary text-monospace font-weight-bold">Example output</div>
+            <div class="card-body">
+              <code>{ "unix": 1550137600000, "utc": "Thu, 14 Feb 2019 09:46:40 GMT" }</code>
+            </div>            
+          </div>
+        </div>         
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>    
+  </body>
+</html>
